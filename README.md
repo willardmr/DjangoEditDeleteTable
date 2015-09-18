@@ -6,7 +6,7 @@ Example as used in get_context_data of a class-based view:
 def get_context_data(self, **kwargs):
         objects = models.objects.all()
         widget = widgets.EditDelete(
-            item_attrs=('attr1', 'attr2'))
+            item_attrs=['attr1', 'attr2'])
         widget.choices = objects
         object_table = playerwidget.render("objects", None)
         context = super().get_context_data(**kwargs)
